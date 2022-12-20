@@ -17,8 +17,19 @@ class TestClass:
          
     def test_files_correct_path(self):
         """ Test"""
-        assert readfile('code/files/files/months.txt') == "January\n"
+        assert readfile('code/files/files/months.txt') == "January"
 
+    def test_files_line_0(self):
+        """ Test"""
+        assert readline('code/files/files/months.txt', 0) == "January"
+
+    def test_files_line_6(self):
+        """ Test"""
+        assert readline('code/files/files/months.txt', 5) == "June"
+        
+    def test_files_line_12(self):
+        """ Test"""
+        assert readline('code/files/files/months.txt',11) == "December"
  
 
 if __name__ == '__main__':
